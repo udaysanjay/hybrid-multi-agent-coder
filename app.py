@@ -46,17 +46,6 @@ st.markdown("<h1 style='color: #ffffff; margin-bottom: 0px;'>⚡ ForgeAI Develop
 st.markdown("<p style='color: #8a92a6; font-size: 1.1rem;'>Autonomous Actor-Critic Multi-Agent Assembly Pipeline</p>", unsafe_allow_html=True)
 st.markdown("---")
 
-# Analytical Metric Trackers Layout Cards
-m1, m2, m3 = st.columns(3)
-with m1:
-    st.markdown('<div class="metric-card"><div class="metric-val">3 Agents</div><div class="metric-lbl">Active Workforce Topology</div></div>', unsafe_allow_html=True)
-with m2:
-    st.markdown('<div class="metric-card"><div class="metric-val">&lt; 6 Seconds</div><div class="metric-lbl">Average Cloud Latency</div></div>', unsafe_allow_html=True)
-with m3:
-    st.markdown('<div class="metric-card"><div class="metric-val">100% Secure</div><div class="metric-lbl">Environment Vault Execution</div></div>', unsafe_allow_html=True)
-
-st.markdown("<br>", unsafe_allow_html=True)
-
 # Requirement Input Matrix Layout Block
 input_col, button_col = st.columns([3, 1])
 
@@ -66,7 +55,7 @@ with input_col:
                                 label_visibility="collapsed")
 
 with button_col:
-    trigger_pipeline = st.button("🚀 Begin Factory Synthesis", type="primary", use_container_width=True)
+    trigger_pipeline = st.button("🚀 Enter Prompt ", type="primary", use_container_width=True)
 
 # ==========================================================
 # AGENTIC COMPILATION ENGINE
@@ -125,7 +114,7 @@ if trigger_pipeline:
             # Clear running load layouts upon complete success
             progress_bar.empty()
             console_logs.empty()
-            st.balloons()
+            # st.balloons()
             
             # ------------------------------------------------------
             # DISPLAY HIGH-FIDELITY OUTPUT TABS
