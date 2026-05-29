@@ -19,16 +19,16 @@ def extract_clean_code(text):
 # ==========================================================
 # STREAMLIT UI DESIGN LAYOUT (VERIFIED PRODUCTION VERSION)
 # ==========================================================
-st.set_page_config(page_title="Multi-Agent Coding Engine", page_icon="🤖", layout="wide")
+st.set_page_config(page_title="ForgeAI Studio", page_icon="⚡", layout="wide")
 
-# Corrected parameter syntax: 'unsafe_allow_html=True' to fix Python 3.14 runtime errors
+# Fixed CSS injector block using clean parameter naming to prevent compilation errors
 st.markdown("<style>.block-container {padding-top: 2rem; padding-bottom: 2rem;} .metric-card {background-color: #1e222b; border: 1px solid #2d3139; padding: 1.5rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);} .metric-val {font-size: 1.8rem; font-weight: bold; color: #00ffd0;} .metric-lbl {font-size: 0.9rem; color: #8a92a6; margin-top: 5px;}</style>", unsafe_allow_html=True)
 
 # ==========================================================
 # SIDEBAR CONTROL WORKSPACE
 # ==========================================================
 with st.sidebar:
-    st.markdown("<h2 style='text-align: center; color: #00ffd0;'>⚙️ ForgeAI Control</h2>", unsafe_with_html=True)
+    st.markdown("<h2 style='text-align: center; color: #00ffd0;'>⚙️ ForgeAI Control</h2>", unsafe_allow_html=True)
     st.markdown("---")
     st.markdown("### 🖥️ System Core Runtime")
     st.code(f"Engine: {CLOUD_MODEL}\nType: Multi-Agent v2.0", language="text")
@@ -42,8 +42,8 @@ with st.sidebar:
 # ==========================================================
 # MAIN DASHBOARD INTERFACE
 # ==========================================================
-st.markdown("<h1 style='color: #ffffff; margin-bottom: 0px;'>⚡ ForgeAI Developer Studio</h1>", unsafe_with_html=True)
-st.markdown("<p style='color: #8a92a6; font-size: 1.1rem;'>Autonomous Actor-Critic Multi-Agent Assembly Pipeline</p>", unsafe_with_html=True)
+st.markdown("<h1 style='color: #ffffff; margin-bottom: 0px;'>⚡ ForgeAI Developer Studio</h1>", unsafe_allow_html=True)
+st.markdown("<p style='color: #8a92a6; font-size: 1.1rem;'>Autonomous Actor-Critic Multi-Agent Assembly Pipeline</p>", unsafe_allow_html=True)
 st.markdown("---")
 
 # Analytical Metric Trackers Layout Cards
@@ -51,11 +51,11 @@ m1, m2, m3 = st.columns(3)
 with m1:
     st.markdown('<div class="metric-card"><div class="metric-val">3 Agents</div><div class="metric-lbl">Active Workforce Topology</div></div>', unsafe_allow_html=True)
 with m2:
-    st.markdown('<div class="metric-card"><div class="metric-val">&lt; 6 Seconds</div><div class="metric-lbl">Average Cloud Latency</div></div>', unsafe_with_html=True)
+    st.markdown('<div class="metric-card"><div class="metric-val">&lt; 6 Seconds</div><div class="metric-lbl">Average Cloud Latency</div></div>', unsafe_allow_html=True)
 with m3:
     st.markdown('<div class="metric-card"><div class="metric-val">100% Secure</div><div class="metric-lbl">Environment Vault Execution</div></div>', unsafe_allow_html=True)
 
-st.markdown("<br>", unsafe_with_html=True)
+st.markdown("<br>", unsafe_allow_html=True)
 
 # Requirement Input Matrix Layout Block
 input_col, button_col = st.columns([3, 1])
